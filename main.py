@@ -73,6 +73,8 @@ hard_keys = {
     '>': ['', '', '9'],
     '?': ['', '', '10'],
 
+    ' ': ['', '', '']
+
 }
 
 keys = []
@@ -101,6 +103,8 @@ def on_release(key):
         return False
     if key == keyboard.Key.backspace:
         keys.pop()
+    if key == keyboard.Key.space:
+        keys.append(hard_keys[' '])
 
 
 def main():
