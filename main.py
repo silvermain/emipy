@@ -99,12 +99,15 @@ def on_release(key):
         print(keys)
         matrix = np.array(keys)
         matrix_transposed = matrix.T
+        print('Guardando en archivo tablatura.csv')
         np.savetxt('tablatura.csv', matrix_transposed, delimiter=',', fmt='%s')
         return False
     if key == keyboard.Key.backspace:
         keys.pop()
     if key == keyboard.Key.space:
         keys.append(hard_keys[' '])
+    if key == keyboard.Key.ctrl:
+        keys.append(['0', '0', '0'])
 
 
 def main():
