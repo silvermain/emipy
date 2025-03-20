@@ -1,7 +1,6 @@
 from pynput import keyboard
 import numpy as np
 
-
 hard_keys = {
     'q': ['-1', '', ''],
     'w': ['-2', '', ''],
@@ -107,8 +106,11 @@ def on_release(key):
     if key == keyboard.Key.space:
         keys.append(hard_keys[' '])
     if key == keyboard.Key.ctrl_l:
-        keys.append(['0', '0', '0'])
-        print(['0', '0', '0'])
+        keys.append(['[', '[', '['])
+        print(['[', '[', '['])
+    if key == keyboard.Key.ctrl_r:
+        keys.append([']', ']', ']'])
+        print([']', ']', ']'])
 
 
 def main():
