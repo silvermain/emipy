@@ -106,8 +106,9 @@ def on_release(key):
         keys.pop()
     if key == keyboard.Key.space:
         keys.append(hard_keys[' '])
-    if key == keyboard.Key.ctrl:
+    if key == keyboard.Key.ctrl_l:
         keys.append(['0', '0', '0'])
+        print(['0', '0', '0'])
 
 
 def main():
